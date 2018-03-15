@@ -134,6 +134,16 @@ class Player:
 			else:
 				count -=1
 
+class Pitcher:
+	def __init__(self, name, era):
+		self.Name = name
+		self.ERA = era
+
+	def Pitch(self):
+		# TO DO
+		# needs to modify the Players OBP value
+		# based on the ERA
+
 class Game:
 	def __init__(self, team1, team2):
 		self.Team1 = team1
