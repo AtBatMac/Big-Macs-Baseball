@@ -1,0 +1,81 @@
+import random
+
+class Pitcher:
+    def __init__(self, name, team, league, ERA, position, throws, avg_outs):
+        self.Name = name
+        self.Team = team
+        self.League = league
+        self.ERA = ERA
+        self.Position = position
+        self.Throws = throws
+        self.Avg_Outs = avg_outs
+
+
+
+class Team:
+    def __init__(self, name):
+        self.Name = name
+        self.Pitchers = None
+        self.OutCount = 0
+
+    def GetPitcher(self):
+
+        Pitcher_Outs = 0
+
+        return Pitcher.Position
+
+        while Pitcher.Avg_Outs > Pitcher_Outs:
+            Pitcher_Outs += 1
+
+    def pitcher_sim(self):
+
+        Total_Outs = 27
+
+
+        for Pitcher in self.Pitchers:
+
+            Pitcher_Outs = 0
+
+
+            while Pitcher.Avg_Outs > Pitcher_Outs and Total_Outs >0:
+
+                Total_Outs -= 1
+                Pitcher_Outs +=1
+
+                print(Pitcher.Name)
+                print (Total_Outs)
+
+        else:
+            print('Game Over')
+
+
+class Positions:
+    def __init__(self, positionname):
+            self.Name = None
+            self.Team = None
+            self.Position = positionname
+
+
+
+
+TheNationals = Team('Washington Nationals')
+
+
+Starter = Positions('Starter')
+Reliever = Positions('Reliever')
+Closer = Positions('Closer')
+
+
+MyPitcher = Pitcher('Max Scherzer', TheNationals, 'NL', 2.51, Starter, 'Right', 19)
+MyPitcher2 = Pitcher('Sean Doolittle', TheNationals, 'NL', 2.40, Closer, 'Left', 3)
+MyPitcher3 = Pitcher('Mat Albers', TheNationals, 'NL', 1.62, Reliever, 'Right', 3)
+MyPitcher4 = Pitcher('Enny Romero', TheNationals, 'NL', 3.56, Reliever, 'Left', 3)
+MyPitcher5 = Pitcher('Joe Blanton', TheNationals, 'NL', 5.68,  Reliever, 'Right', 3)
+MyPitcher6 = Pitcher('Oliver Perez', TheNationals, 'NL', 4.64, Reliever, 'Left', 2)
+
+
+NationalsRelievers = [MyPitcher3, MyPitcher4, MyPitcher5, MyPitcher6]
+
+TheNationals.Pitchers = [MyPitcher, MyPitcher2, MyPitcher3, MyPitcher4, MyPitcher5, MyPitcher6]
+
+TheNationals.pitcher_sim()
